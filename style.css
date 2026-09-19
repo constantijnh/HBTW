@@ -1,0 +1,159 @@
+/* ==========================================================
+   Heetebrij Bouw & Timmerwerken (HBTW) - stijlblad bij het logo
+
+   Logo-kleuren
+     Marineblauw  #1F3B57  embleem, koppen, tekst op knoppen
+     Amber        #F2B84B  zaagtand, ring, knoppen
+     Wit          #FFFFFF  dak en letters in het embleem
+
+   Lettertypes
+     Barlow Condensed  koppen en bedrijfsnaam
+     Barlow            lopende tekst
+
+   Gebruik
+     Zet in elke pagina in de <head>:
+     <link rel="stylesheet" href="style.css">
+     De lettertypes worden hieronder geladen (internet nodig).
+   ========================================================== */
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@600;700&display=swap");
+
+:root{
+  --navy:#1F3B57;
+  --night:#132638;
+  --amber:#F2B84B;
+  --amber-dark:#E3A52F;
+  --fog:#EEF1F4;
+  --ink:#1B2733;
+  --slate:#566574;
+  --line:#B9C3CC;
+  --display:"Barlow Condensed","Arial Narrow","Helvetica Neue",Arial,sans-serif;
+  --body:"Barlow","Helvetica Neue",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;font-family:var(--body);font-size:1.0625rem;line-height:1.6;color:var(--ink);background:#fff}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.05;margin:0;color:var(--navy)}
+h2{font-size:clamp(2.1rem,4.2vw,2.9rem);margin-bottom:.6rem}
+h3{font-size:1.55rem;font-weight:600;margin-bottom:.3rem}
+p{margin:0 0 1rem;max-width:62ch}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--navy);outline-offset:3px}
+.hero :focus-visible,.site-footer :focus-visible{outline-color:var(--amber)}
+.wrap{width:min(1120px,100% - 2.5rem);margin-inline:auto}
+.skip{position:absolute;left:-999px;top:0;background:var(--amber);color:var(--navy);padding:.6rem 1rem;z-index:20}
+.skip:focus{left:0}
+
+.site-header{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid #D5DCE2}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;padding:.7rem 0}
+.brand{display:flex;align-items:center;gap:.75rem;text-decoration:none;color:var(--navy)}
+.brand-mark{width:48px;height:48px;flex:none}
+.brand-name{font-family:var(--display);font-weight:700;font-size:1.6rem;line-height:1;letter-spacing:.02em}
+.brand-name small{display:block;font-family:var(--body);font-weight:500;font-size:.8rem;letter-spacing:0;color:var(--slate);margin-top:.2rem}
+.site-header nav ul{display:flex;align-items:center;gap:1.6rem;list-style:none;margin:0;padding:0}
+.site-header nav a{font-weight:500;text-decoration:none;color:var(--navy)}
+.site-header nav a:hover{text-decoration:underline;text-decoration-color:var(--amber);text-decoration-thickness:3px;text-underline-offset:6px}
+.site-header nav a.nav-cta{background:var(--amber);padding:.55rem 1.05rem;border-radius:4px;font-weight:600}
+.site-header nav a.nav-cta:hover{background:var(--amber-dark);text-decoration:none}
+
+.hero{background:var(--navy);color:#fff;padding:4.5rem 0 4rem}
+.hero-grid{display:grid;grid-template-columns:1.5fr .5fr;gap:3rem;align-items:center}
+.hero h1{color:#fff;font-size:clamp(2.9rem,7vw,5.2rem);letter-spacing:-.005em;max-width:13ch;margin-bottom:1.2rem}
+.lead{font-size:1.25rem;color:#D3DEE9;max-width:52ch;margin-bottom:2rem}
+.actions{display:flex;flex-wrap:wrap;gap:.9rem;margin:0}
+.hero-mark{width:100%;max-width:250px;justify-self:center}
+.btn{display:inline-block;font:600 1.05rem/1 var(--body);padding:1rem 1.5rem;border-radius:4px;text-decoration:none;border:2px solid transparent;cursor:pointer}
+.btn-primary{background:var(--amber);color:var(--navy)}
+.btn-primary:hover{background:var(--amber-dark)}
+.btn-ghost{border-color:#fff;color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.12)}
+.saw{background:var(--navy);line-height:0}
+.saw svg{display:block;width:100%;height:18px}
+
+.section{padding:5rem 0;scroll-margin-top:80px}
+.section-fog{background:var(--fog)}
+.intro{color:var(--slate);font-size:1.15rem;margin-bottom:2.5rem}
+
+.services{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:2.4rem 3.5rem}
+.services li{border-top:3px solid var(--navy);padding-top:1rem}
+.services p{margin:0;color:var(--slate)}
+
+.two-col{display:grid;grid-template-columns:1.1fr .9fr;gap:4rem;align-items:start}
+.checks{list-style:none;margin:1rem 0 0;padding:0}
+.checks li{position:relative;padding:.7rem 0 .7rem 1.6rem;border-bottom:1px solid #D5DCE2}
+.checks li::before{content:"";position:absolute;left:0;top:1.2rem;width:.7rem;height:.7rem;background:var(--amber)}
+
+.steps{margin:1.5rem 0 0;padding-left:1.4rem}
+.steps li{padding:.3rem 0 .3rem .3rem}
+.steps li::marker{font-family:var(--display);font-weight:700;color:var(--navy)}
+
+.panel{background:#fff;border-top:5px solid var(--amber);padding:2rem;box-shadow:0 1px 0 #D5DCE2}
+.field{margin-bottom:1.1rem}
+.field label{display:block;font-weight:600;margin-bottom:.3rem;color:var(--navy)}
+.field input,.field select,.field textarea{width:100%;font:inherit;color:var(--ink);background:#fff;border:1.5px solid var(--line);border-radius:4px;padding:.7rem .8rem}
+.field textarea{min-height:130px;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--navy)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.status{margin:1rem 0 0;color:var(--navy);font-weight:500}
+.hint{color:var(--slate);font-size:.95rem;margin:0 0 1.2rem}
+
+.contact-list{margin:1.5rem 0 0;display:grid;grid-template-columns:max-content 1fr;gap:.7rem 2rem}
+.contact-list dt{font-weight:600;color:var(--navy)}
+.contact-list dd{margin:0}
+.contact-list a{color:var(--navy);font-weight:500}
+
+.site-footer{background:var(--night);color:#C5D2DE;padding:2.5rem 0}
+.foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem}
+.foot .brand{color:#fff}
+.foot .brand-name small{color:#9FB2C4}
+.foot p{margin:0;font-size:.95rem}
+
+@media (max-width:860px){
+  .hero-grid{grid-template-columns:1fr}
+  .hero-mark{display:none}
+  .two-col{grid-template-columns:1fr;gap:2.5rem}
+  .services{grid-template-columns:1fr}
+}
+@media (max-width:760px){
+  .site-header{position:static}
+  .bar{flex-direction:column;align-items:flex-start;gap:.8rem}
+  .site-header nav ul{flex-wrap:wrap;gap:.6rem 1.2rem}
+  .section{padding:3.5rem 0;scroll-margin-top:16px}
+  .row{grid-template-columns:1fr}
+  .panel{padding:1.4rem}
+  .contact-list{grid-template-columns:1fr;gap:.1rem}
+  .contact-list dd{margin-bottom:.8rem}
+}
+
+/* ==========================================================
+   Extra onderdelen voor de site met meerdere pagina's
+   ========================================================== */
+.site-header nav a[aria-current="page"]{text-decoration:underline;text-decoration-color:var(--amber);text-decoration-thickness:3px;text-underline-offset:6px}
+
+.page-hero{background:var(--navy);color:#fff;padding:3.2rem 0 2.6rem}
+.page-hero h1{color:#fff;font-size:clamp(2.6rem,6vw,4.2rem);margin-bottom:.8rem}
+.page-hero .lead{margin:0}
+.page-hero :focus-visible{outline-color:var(--amber)}
+
+.btn-outline{border-color:var(--navy);color:var(--navy)}
+.btn-outline:hover{background:var(--navy);color:#fff}
+.more{margin:2.5rem 0 0}
+
+.cta-band{background:var(--navy);color:#fff;padding:3.5rem 0}
+.cta-band :focus-visible{outline-color:var(--amber)}
+.cta-inner{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.5rem 3rem}
+.cta-band h2{color:#fff;margin-bottom:.4rem}
+.cta-band p{color:#D3DEE9;margin:0}
+
+.panel{scroll-margin-top:96px}
+.panel h2{font-size:2rem;margin-bottom:1rem}
+.after{margin-top:2.5rem}
+
+.foot-links{display:flex;flex-wrap:wrap;gap:.4rem 1.4rem;list-style:none;margin:0;padding:0}
+.foot-links a{color:#C5D2DE;text-decoration:none}
+.foot-links a:hover{color:#fff;text-decoration:underline;text-decoration-color:var(--amber);text-decoration-thickness:3px;text-underline-offset:5px}
+
+@media (max-width:760px){
+  .panel{scroll-margin-top:16px}
+  .page-hero{padding:2.4rem 0 2rem}
+}
