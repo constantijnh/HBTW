@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1F3B57">
+  <title>Offerte aanvragen | Heetebrij Bouw &amp; Timmerwerken</title>
+  <meta name="description" content="Vraag vrijblijvend een offerte aan bij Heetebrij Bouw &amp; Timmerwerken.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="offerte.css">
+</head>
+<body>
+  <a class="skip" href="#main">Ga naar de inhoud</a>
+
+  <header class="kop">
+    <div class="in kop-in">
+      <a class="merk-link" href="index.html" aria-label="Heetebrij Bouw &amp; Timmerwerken, naar de homepagina">
+        <svg class="merk" viewBox="0 0 40 40" aria-hidden="true">
+          <rect width="40" height="40" rx="4" fill="#1F3B57"/>
+          <path d="M6 20 20 8l14 12" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round"/>
+          <path d="M8 32l4-6 4 6 4-6 4 6 4-6 4 6" fill="none" stroke="#C58B3C" stroke-width="2.5" stroke-linejoin="round"/>
+        </svg>
+        <span class="merk-tekst"><strong>Heetebrij</strong><small>Bouw &amp; timmerwerken</small></span>
+      </a>
+      <nav class="nav" aria-label="Hoofdmenu">
+        <a href="index.html">Home</a>
+        <a href="projecten.html">Projecten</a>
+        <a href="diensten.html">Diensten</a>
+        <a href="contact.html">Contact</a>
+        <a class="knop knop-klein" href="offerte.html" aria-current="page">Offerte aanvragen</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="paginakop">
+      <div class="in">
+        <h1>Offerte aanvragen</h1>
+        <p>Vul onderstaand formulier in. Uw aanvraag komt binnen in ons systeem, we nemen zo snel mogelijk contact met u op.</p>
+      </div>
+      <div class="liniaal" aria-hidden="true"></div>
+    </section>
+
+    <div class="in offerte">
+      <div>
+        <div class="klaar">
+          <h2>Klaar om te starten</h2>
+        </div>
+        <div id="melding-plek" aria-live="polite"></div>
+        <form class="formulier" id="offerteformulier" novalidate>
+          <input class="honing" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+          <div class="rij">
+            <div class="veld">
+              <label for="naam">Naam</label>
+              <input type="text" id="naam" name="naam" autocomplete="name" required>
+            </div>
+            <div class="veld">
+              <label for="email">E-mailadres</label>
+              <input type="email" id="email" name="email" autocomplete="email" required>
+            </div>
+          </div>
+
+          <div class="rij">
+            <div class="veld">
+              <label for="telefoon">Telefoonnummer</label>
+              <input type="tel" id="telefoon" name="telefoon" autocomplete="tel">
+            </div>
+            <div class="veld">
+              <label for="plaats">Plaats van de klus</label>
+              <input type="text" id="plaats" name="plaats" autocomplete="address-level2">
+            </div>
+          </div>
+
+          <div class="rij">
+            <div class="veld">
+              <label for="soort">Soort werk</label>
+              <select id="soort" name="soort_werk">
+                <option value="">Kies een soort werk</option>
+                <option value="nieuwbouw">Nieuwbouw</option>
+                <option value="verbouw">Verbouw en aanbouw</option>
+                <option value="timmerwerk">Timmerwerk op maat</option>
+                <option value="onderhoud">Onderhoud en herstel</option>
+                <option value="anders">Anders</option>
+              </select>
+            </div>
+            <div class="veld">
+              <label for="start">Gewenste startperiode (optioneel)</label>
+              <input type="text" id="start" name="gewenste_start" placeholder="Bijv. dit voorjaar">
+            </div>
+          </div>
+
+          <div class="veld">
+            <label for="budget">Indicatie budget (optioneel)</label>
+            <input type="text" id="budget" name="budget" placeholder="Bijv. €10.000 – €15.000">
+          </div>
+
+          <div class="veld">
+            <label for="omschrijving">Omschrijving van de klus</label>
+            <textarea id="omschrijving" name="omschrijving" required placeholder="Vertel zo veel mogelijk over wat u wilt laten bouwen of maken."></textarea>
+          </div>
+
+          <label class="akkoord">
+            <input type="checkbox" name="akkoord" required>
+            <span>Ik geef toestemming dat mijn gegevens worden gebruikt om een offerte op te stellen.</span>
+          </label>
+
+          <button class="knop" type="submit">Offerte aanvragen</button>
+        </form>
+      </div>
+
+      <aside class="daarna" aria-labelledby="daarna-kop">
+        <h2 id="daarna-kop">Wat gebeurt er daarna?</h2>
+        <ol>
+          <li><strong>Uw aanvraag komt binnen</strong> in ons beveiligde systeem, niet zomaar in een mailbox.</li>
+          <li><strong>Wij bekijken de klus</strong> en nemen binnen enkele werkdagen contact met u op.</li>
+          <li><strong>U ontvangt een offerte</strong> met prijs en planning, geheel vrijblijvend.</li>
+          <li><strong>Gaat u akkoord?</strong> Dan plannen we de werkzaamheden in overleg met u in.</li>
+        </ol>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="voet">
+    <div class="in voet-in">
+      <p>© 2026 Heetebrij Bouw &amp; Timmerwerken</p>
+      <nav aria-label="Voettekst">
+        <a href="projecten.html">Projecten</a>
+        <a href="diensten.html">Diensten</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.html">Beheer</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script>
+    (function () {
+      var form = document.getElementById('offerteformulier');
+      var meldingPlek = document.getElementById('melding-plek');
+
+      // vult 'soort werk' automatisch in als je via index.html?soort=... hier komt
+      var params = new URLSearchParams(window.location.search);
+      var soort = params.get('soort');
+      if (soort) {
+        var select = document.getElementById('soort');
+        if ([...select.options].some(function (o) { return o.value === soort; })) {
+          select.value = soort;
+        }
+      }
+
+      function toonMelding(tekst, soortMelding) {
+        meldingPlek.innerHTML = '<p class="melding ' + soortMelding + '">' + tekst + '</p>';
+      }
+
+      form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+        if (form.website.value) return; // spamval, negeer stil
+
+        if (!sb) {
+          toonMelding('De verbinding met de database is nog niet ingesteld (config.js). Bel of mail ons rechtstreeks, zie de contactpagina.', 'fout');
+          return;
+        }
+
+        var knop = form.querySelector('button[type=submit]');
+        knop.disabled = true;
+        knop.textContent = 'Versturen…';
+
+        var data = new FormData(form);
+        var { error } = await sb.from('aanvragen').insert({
+          type: 'offerte',
+          naam: data.get('naam'),
+          email: data.get('email'),
+          telefoon: data.get('telefoon') || null,
+          plaats: data.get('plaats') || null,
+          soort_werk: data.get('soort_werk') || null,
+          gewenste_start: data.get('gewenste_start') || null,
+          budget: data.get('budget') || null,
+          omschrijving: data.get('omschrijving')
+        });
+
+        knop.disabled = false;
+        knop.textContent = 'Offerte aanvragen';
+
+        if (error) {
+          toonMelding('Er ging iets mis bij het versturen. Probeer het opnieuw of bel/mail ons.', 'fout');
+          return;
+        }
+        toonMelding('Bedankt! Uw offerteaanvraag is ontvangen, we nemen snel contact met u op.', 'ok');
+        form.reset();
+      });
+    })();
+  </script>
+</body>
+</html>
