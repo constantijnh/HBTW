@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1F3B57">
+  <title>Projecten | Heetebrij Bouw &amp; Timmerwerken</title>
+  <meta name="description" content="Bekijk projecten van Heetebrij Bouw &amp; Timmerwerken: nieuwbouw, verbouw en timmerwerk op maat.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="projecten.css">
+</head>
+<body>
+  <a class="skip" href="#main">Ga naar de inhoud</a>
+
+  <header class="kop">
+    <div class="in kop-in">
+      <a class="merk-link" href="index.html" aria-label="Heetebrij Bouw &amp; Timmerwerken, naar de homepagina">
+        <svg class="merk" viewBox="0 0 40 40" aria-hidden="true">
+          <rect width="40" height="40" rx="4" fill="#1F3B57"/>
+          <path d="M6 20 20 8l14 12" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round"/>
+          <path d="M8 32l4-6 4 6 4-6 4 6 4-6 4 6" fill="none" stroke="#C58B3C" stroke-width="2.5" stroke-linejoin="round"/>
+        </svg>
+        <span class="merk-tekst"><strong>Heetebrij</strong><small>Bouw &amp; timmerwerken</small></span>
+      </a>
+      <nav class="nav" aria-label="Hoofdmenu">
+        <a href="index.html">Home</a>
+        <a href="projecten.html" aria-current="page">Projecten</a>
+        <a href="diensten.html">Diensten</a>
+        <a href="contact.html">Contact</a>
+        <a class="knop knop-klein" href="offerte.html">Offerte aanvragen</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="paginakop">
+      <div class="in">
+        <h1>Projecten</h1>
+        <p>Een greep uit ons werk. Filter op soort werk om te zien wat het dichtst bij uw klus in de buurt komt.</p>
+      </div>
+      <div class="liniaal" aria-hidden="true"></div>
+    </section>
+
+    <div class="in">
+      <div class="filters" role="group" aria-label="Filter op soort werk">
+        <button class="filter" type="button" data-filter="alle" aria-pressed="true">Alles</button>
+        <button class="filter" type="button" data-filter="nieuwbouw" aria-pressed="false">Nieuwbouw</button>
+        <button class="filter" type="button" data-filter="verbouw" aria-pressed="false">Verbouw en aanbouw</button>
+        <button class="filter" type="button" data-filter="timmerwerk" aria-pressed="false">Timmerwerk op maat</button>
+      </div>
+
+      <!-- PAS AAN: vervang titels, plaatsen en omschrijvingen door echte projecten.
+           Vervang <div class="foto">Foto volgt</div> door <img class="foto" src="img/naam.jpg" alt="Beschrijving">.
+           Kopieer een <article> om een project toe te voegen; data-soort is: nieuwbouw, verbouw of timmerwerk. -->
+      <div class="projecten" id="projecten">
+        <article class="project" data-soort="verbouw">
+          <div class="foto">Foto volgt</div>
+          <h2>Uitbouw woning</h2>
+          <p class="soort">Verbouw en aanbouw, [plaats]</p>
+          <p>Korte omschrijving van het project.</p>
+        </article>
+        <article class="project" data-soort="nieuwbouw">
+          <div class="foto">Foto volgt</div>
+          <h2>Houten bijgebouw</h2>
+          <p class="soort">Nieuwbouw, [plaats]</p>
+          <p>Korte omschrijving van het project.</p>
+        </article>
+        <article class="project" data-soort="timmerwerk">
+          <div class="foto">Foto volgt</div>
+          <h2>Trap op maat</h2>
+          <p class="soort">Timmerwerk op maat, [plaats]</p>
+          <p>Korte omschrijving van het project.</p>
+        </article>
+        <article class="project" data-soort="verbouw">
+          <div class="foto">Foto volgt</div>
+          <h2>Dakopbouw</h2>
+          <p class="soort">Verbouw en aanbouw, [plaats]</p>
+          <p>Korte omschrijving van het project.</p>
+        </article>
+        <article class="project" data-soort="timmerwerk">
+          <div class="foto">Foto volgt</div>
+          <h2>Kastenwand op maat</h2>
+          <p class="soort">Timmerwerk op maat, [plaats]</p>
+          <p>Korte omschrijving van het project.</p>
+        </article>
+        <article class="project" data-soort="nieuwbouw">
+          <div class="foto">Foto volgt</div>
+          <h2>Woning in houtskeletbouw</h2>
+          <p class="soort">Nieuwbouw, [plaats]</p>
+          <p>Korte omschrijving van het project.</p>
+        </article>
+      </div>
+    </div>
+
+    <section class="cta" aria-labelledby="cta-kop">
+      <div class="in cta-in">
+        <div>
+          <h2 id="cta-kop">Een vergelijkbare klus?</h2>
+          <p>Vertel wat u wilt laten maken en ontvang een vrijblijvende offerte.</p>
+        </div>
+        <a class="knop" href="offerte.html">Offerte aanvragen</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="voet">
+    <div class="in voet-in">
+      <p>© 2026 Heetebrij Bouw &amp; Timmerwerken</p>
+      <nav aria-label="Voettekst">
+        <a href="projecten.html">Projecten</a>
+        <a href="diensten.html">Diensten</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.html">Beheer</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var knoppen = document.querySelectorAll('.filter');
+      var projecten = document.querySelectorAll('.project');
+      knoppen.forEach(function (knop) {
+        knop.addEventListener('click', function () {
+          var keuze = knop.dataset.filter;
+          knoppen.forEach(function (k) { k.setAttribute('aria-pressed', String(k === knop)); });
+          projecten.forEach(function (p) {
+            p.hidden = !(keuze === 'alle' || p.dataset.soort === keuze);
+          });
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
