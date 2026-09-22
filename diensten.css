@@ -1,0 +1,86 @@
+/* HBTW - basis: kleuren, letters, kop, knoppen, voet */
+:root{
+  --navy:#1F3B57; --navy-diep:#142A40; --inkt:#17232F; --papier:#F4F6F7; --wit:#fff;
+  --hout:#C58B3C; --hout-diep:#8F5F1E; --lijn:#D5DCE1; --gedempt:#54646F;
+  --kop-font:"Barlow Condensed","Arial Narrow",Arial,sans-serif;
+  --tekst-font:"Source Sans 3","Segoe UI",Arial,sans-serif;
+  --breed:72rem;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--tekst-font);font-size:1.0625rem;line-height:1.6;color:var(--inkt);background:var(--wit)}
+img,svg{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--kop-font);line-height:1.05;margin:0;letter-spacing:.005em}
+:focus-visible{outline:3px solid var(--hout);outline-offset:3px}
+.skip{position:absolute;left:-999px;top:0;background:var(--navy);color:#fff;padding:.6rem 1rem;z-index:20}
+.skip:focus{left:0}
+.in{width:min(100% - 2.5rem,var(--breed));margin-inline:auto}
+
+/* kop */
+.kop{position:sticky;top:0;z-index:10;background:var(--wit);border-bottom:1px solid var(--lijn)}
+.kop-in{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;padding:.7rem 0}
+.merk-link{display:flex;align-items:center;gap:.7rem;text-decoration:none}
+.merk{width:2.5rem;height:2.5rem;flex:none}
+.merk-tekst{display:grid;line-height:1.1}
+.merk-tekst strong{font-family:var(--kop-font);font-size:1.55rem;color:var(--navy);letter-spacing:.02em}
+.merk-tekst small{color:var(--gedempt);font-size:.85rem}
+.nav{display:flex;align-items:center;gap:1.5rem}
+.nav a{text-decoration:none;font-weight:600}
+.nav a:not(.knop){padding:.3rem 0;border-bottom:2px solid transparent}
+.nav a:not(.knop):hover,.nav a[aria-current=page]{border-color:var(--hout)}
+
+/* knoppen */
+.knop{display:inline-block;font:inherit;font-weight:700;background:var(--hout);color:var(--navy-diep);text-decoration:none;padding:.85rem 1.4rem;border:2px solid var(--hout);border-radius:3px;cursor:pointer;line-height:1.2}
+.knop:hover{background:#D79B4A;border-color:#D79B4A}
+.knop-rand{background:transparent;color:inherit;border-color:currentColor}
+.knop-rand:hover{background:rgba(255,255,255,.12);border-color:currentColor}
+.knop-klein{padding:.5rem 1rem}
+
+/* liniaal: het terugkerende element */
+.liniaal{height:20px;color:var(--hout);
+  background:
+    repeating-linear-gradient(90deg,currentColor 0 2px,transparent 2px 60px) 0 0/100% 20px no-repeat,
+    repeating-linear-gradient(90deg,currentColor 0 1px,transparent 1px 12px) 0 0/100% 10px no-repeat}
+
+/* voet */
+.voet{background:var(--navy-diep);color:#C9D3DB;padding:2rem 0;font-size:.95rem}
+.voet-in{display:flex;flex-wrap:wrap;gap:1rem 2rem;justify-content:space-between;align-items:center}
+.voet nav{display:flex;flex-wrap:wrap;gap:.5rem 1.25rem}
+.voet a{text-decoration:none}
+.voet a:hover{text-decoration:underline}
+
+@media (max-width:760px){
+  .kop-in{flex-direction:column;align-items:flex-start;gap:.4rem}
+  .nav{width:100%;overflow-x:auto;gap:1.1rem;padding-bottom:.4rem;white-space:nowrap}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* paginakop (navy balk bovenaan) */
+.paginakop{background:var(--navy);color:#fff;padding-top:3.5rem}
+.paginakop h1{font-size:clamp(2.6rem,6vw,4.2rem);font-weight:700}
+.paginakop p{max-width:36rem;color:#DCE4EA;font-size:1.15rem;margin:.9rem 0 2.75rem}
+
+/* ===== Diensten ===== */
+.diensten-lijst{list-style:none;margin:0;padding:3rem 0 1rem;display:grid;gap:0;border-top:2px solid var(--navy)}
+.dienst-item{display:grid;grid-template-columns:5.5rem minmax(0,1fr) auto;gap:1rem 2rem;align-items:start;padding:2.25rem 0;border-bottom:1px solid var(--lijn)}
+.dienst-item .nr{font-family:var(--kop-font);font-size:2.4rem;color:var(--hout);line-height:1}
+.dienst-item h2{font-size:2rem;color:var(--navy);margin-bottom:.5rem}
+.dienst-item p{margin:0;color:var(--gedempt);max-width:36rem}
+.dienst-item a{align-self:center;white-space:nowrap}
+@media (max-width:700px){
+  .dienst-item{grid-template-columns:3.5rem 1fr;padding:1.75rem 0}
+  .dienst-item a{grid-column:1/-1;margin-top:.75rem;justify-self:start}
+}
+
+.werkwijze{background:var(--papier)}
+.punten{list-style:none;margin:2rem 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem}
+.punten li{padding-left:1.1rem;border-left:3px solid var(--hout);font-weight:600;color:var(--navy);font-size:1.1rem;line-height:1.35}
+@media (max-width:900px){.punten{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:520px){.punten{grid-template-columns:1fr}}
+
+/* afsluitende oproep */
+.cta{background:var(--navy);color:#fff;padding:4rem 0}
+.cta-in{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.5rem 3rem}
+.cta h2{font-size:clamp(2rem,4vw,2.9rem)}
+.cta p{margin:.5rem 0 0;color:#DCE4EA}
