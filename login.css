@@ -1,0 +1,20 @@
+/* ===== Inloggen ===== */
+:root{--navy:#1F3B57;--navy-diep:#142A40;--inkt:#17232F;--hout:#C58B3C;--gedempt:#54646F;
+  --kop-font:"Barlow Condensed","Arial Narrow",Arial,sans-serif;--tekst-font:"Source Sans 3","Segoe UI",Arial,sans-serif}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;min-height:100vh;display:grid;place-items:center;padding:1.5rem;background:var(--navy);
+  font-family:var(--tekst-font);font-size:1.0625rem;line-height:1.6;color:var(--inkt)}
+:focus-visible{outline:3px solid var(--hout);outline-offset:3px}
+.kaart{width:min(100%,26rem);background:#fff;border-top:6px solid var(--hout);border-radius:3px;padding:2rem}
+.kaart h1{font-family:var(--kop-font);font-size:2.4rem;line-height:1.05;margin:0 0 .3rem;color:var(--navy)}
+.kaart p{margin:0 0 1.5rem;color:var(--gedempt)}
+.formulier{display:grid;gap:1.1rem}
+.veld{display:grid;gap:.35rem}
+.veld label{font-weight:600}
+.veld input{font:inherit;width:100%;padding:.75rem .85rem;border:1.5px solid #8E9DA9;border-radius:3px}
+.veld input:focus{outline:3px solid var(--hout);outline-offset:0;border-color:var(--navy)}
+.knop{font:inherit;font-weight:700;background:var(--hout);color:var(--navy-diep);padding:.85rem 1.4rem;border:2px solid var(--hout);border-radius:3px;cursor:pointer}
+.knop:hover{background:#D79B4A;border-color:#D79B4A}
+.knop[disabled]{opacity:.6;cursor:progress}
+.melding{padding:.9rem 1rem;border-left:4px solid #B3341F;background:#FBEDEA;color:#7A1F10;border-radius:2px}
+.terug{display:inline-block;margin-top:1.25rem;color:var(--navy);font-weight:600}
