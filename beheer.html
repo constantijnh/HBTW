@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1F3B57">
+  <title>Beheer aanvragen | Heetebrij Bouw &amp; Timmerwerken</title>
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="beheer.css">
+</head>
+<body>
+  <header class="balk">
+    <div class="in balk-in">
+      <h1>Aanvragen<span class="teller" id="teller-nieuw" hidden>0</span></h1>
+      <div class="balk-rechts">
+        <span id="wie-ben-ik"></span>
+        <a href="index.html">Naar de website</a>
+        <button class="knop knop-licht" type="button" id="uitlog-knop">Uitloggen</button>
+      </div>
+    </div>
+  </header>
+
+  <div id="melding-plek" class="in"></div>
+
+  <main class="in werkveld" id="werkveld" hidden>
+    <div class="lijst-wrap">
+      <div class="filters">
+        <select id="filter-status" aria-label="Filter op status">
+          <option value="">Alle statussen</option>
+          <option value="nieuw">Nieuw</option>
+          <option value="in_behandeling">In behandeling</option>
+          <option value="offerte_verstuurd">Offerte verstuurd</option>
+          <option value="akkoord">Akkoord</option>
+          <option value="afgewezen">Afgewezen</option>
+          <option value="afgerond">Afgerond</option>
+        </select>
+        <select id="filter-type" aria-label="Filter op type">
+          <option value="">Offertes en vragen</option>
+          <option value="offerte">Alleen offertes</option>
+          <option value="vraag">Alleen vragen</option>
+        </select>
+      </div>
+      <ul class="lijst" id="lijst"></ul>
+    </div>
+
+    <div class="detail" id="detail">
+      <p class="leeg">Kies een aanvraag uit de lijst om de gegevens te bekijken.</p>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script src="beheer.js"></script>
+</body>
+</html>
