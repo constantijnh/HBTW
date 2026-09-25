@@ -4,80 +4,28 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#1F3B57">
-  <title>Inloggen | Heetebrij Bouw &amp; Timmerwerken</title>
+  <title>Beheer | Heetebrij Bouw &amp; Timmerwerken</title>
   <meta name="robots" content="noindex">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&amp;family=Source+Sans+3:wght@400;600;700&amp;display=swap">
   <link rel="stylesheet" href="login.css">
 </head>
+
 <body>
   <div class="kaart">
-    <h1>Inloggen</h1>
-    <p>Alleen voor Heetebrij Bouw &amp; Timmerwerken, om offerteaanvragen te behandelen.</p>
+    <h1>Beheer</h1>
+    <p>Je wordt doorgestuurd naar het beheerscherm.</p>
 
-    <div id="melding-plek"></div>
-
-    <form class="formulier" id="inlogformulier" novalidate>
-      <div class="veld">
-        <label for="email">E-mailadres</label>
-        <input type="email" id="email" name="email" autocomplete="email" required>
-      </div>
-      <div class="veld">
-        <label for="wachtwoord">Wachtwoord</label>
-        <input type="password" id="wachtwoord" name="wachtwoord" autocomplete="current-password" required>
-      </div>
-      <button class="knop" type="submit">Inloggen</button>
-    </form>
+    <a class="knop" href="beheer.html">Beheerscherm openen</a>
 
     <a class="terug" href="index.html">← Terug naar de website</a>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script src="config.js"></script>
   <script>
-    (function () {
-      var form = document.getElementById('inlogformulier');
-      var meldingPlek = document.getElementById('melding-plek');
-
-      function toonMelding(tekst) {
-        meldingPlek.innerHTML = '<p class="melding">' + tekst + '</p>';
-      }
-
-      // Als er al een sessie is, meteen doorsturen naar het beheerscherm
-      (async function () {
-        if (!sb) return;
-        var { data } = await sb.auth.getSession();
-        if (data.session) window.location.href = 'beheer.html';
-      })();
-
-      form.addEventListener('submit', async function (e) {
-        e.preventDefault();
-
-        if (!sb) {
-          toonMelding('De verbinding met de database is nog niet ingesteld (config.js).');
-          return;
-        }
-
-        var knop = form.querySelector('button[type=submit]');
-        knop.disabled = true;
-        knop.textContent = 'Bezig…';
-
-        var { error } = await sb.auth.signInWithPassword({
-          email: form.email.value,
-          password: form.wachtwoord.value
-        });
-
-        knop.disabled = false;
-        knop.textContent = 'Inloggen';
-
-        if (error) {
-          toonMelding('Inloggen is niet gelukt. Controleer e-mailadres en wachtwoord.');
-          return;
-        }
-        window.location.href = 'beheer.html';
-      });
-    })();
+    // Opent de beheerpagina; maakt geen Supabase-inlogsessie aan.
+    window.location.replace('beheer.html');
   </script>
 </body>
 </html>
