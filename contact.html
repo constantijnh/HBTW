@@ -3,7 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#1F3B57">
+  <meta name="theme-color" content="#0A0A0A">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
   <title>Contact | Heetebrij Bouw &amp; Timmerwerken</title>
   <meta name="description" content="Neem contact op met Heetebrij Bouw &amp; Timmerwerken.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,11 +20,7 @@
   <header class="kop">
     <div class="in kop-in">
       <a class="merk-link" href="index.html" aria-label="Heetebrij Bouw &amp; Timmerwerken, naar de homepagina">
-        <svg class="merk" viewBox="0 0 40 40" aria-hidden="true">
-          <rect width="40" height="40" rx="4" fill="#1F3B57"/>
-          <path d="M6 20 20 8l14 12" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round"/>
-          <path d="M8 32l4-6 4 6 4-6 4 6 4-6 4 6" fill="none" stroke="#C58B3C" stroke-width="2.5" stroke-linejoin="round"/>
-        </svg>
+        <img class="merk" src="img/favicon.svg" width="40" height="40" alt="" aria-hidden="true">
         <span class="merk-tekst"><strong>Heetebrij</strong><small>Bouw &amp; timmerwerken</small></span>
       </a>
       <nav class="nav" aria-label="Hoofdmenu">
@@ -37,13 +36,13 @@
   <main id="main">
     <section class="paginakop">
       <div class="in">
-        <h1>Contact</h1>
-        <p>Heeft u een vraag? Stuur een bericht of bel gerust. Voor een offerte gebruikt u het aparte offerteformulier.</p>
+        <h1 data-toon>Contact</h1>
+        <p data-toon>Heeft u een vraag? Stuur een bericht of bel gerust. Voor een offerte gebruikt u het aparte offerteformulier.</p>
       </div>
       <div class="liniaal" aria-hidden="true"></div>
     </section>
 
-    <div class="in contact">
+    <div class="in contact" data-toon="groep">
       <div>
         <h2>Gegevens</h2>
         <!-- PAS AAN: vul de echte contactgegevens in -->
@@ -112,5 +111,6 @@
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="config.js"></script>
   <script src="contact.js"></script>
+  <script src="effecten.js"></script>
 </body>
 </html>
