@@ -1,6 +1,6 @@
 /* ===== Beheer: aanvragen behandelen ===== */
-:root{--navy:#1F3B57;--navy-diep:#142A40;--inkt:#17232F;--papier:#F4F6F7;--hout:#C58B3C;--hout-diep:#8F5F1E;
-  --lijn:#D5DCE1;--gedempt:#54646F;
+:root{--navy:#0A0A0A;--navy-diep:#000000;--inkt:#111111;--papier:#F2F0EE;--hout:#E63946;--hout-diep:#C1121F;
+  --lijn:#DCDCDC;--gedempt:#595959;
   --kop-font:"Barlow Condensed","Arial Narrow",Arial,sans-serif;--tekst-font:"Source Sans 3","Segoe UI",Arial,sans-serif}
 *,*::before,*::after{box-sizing:border-box}
 body{margin:0;background:var(--papier);font-family:var(--tekst-font);font-size:1.0625rem;line-height:1.5;color:var(--inkt)}
@@ -10,12 +10,14 @@ body{margin:0;background:var(--papier);font-family:var(--tekst-font);font-size:1
 .balk{background:var(--navy);color:#fff}
 .balk-in{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:.75rem 1.5rem;padding:.9rem 0}
 .balk h1{font-family:var(--kop-font);font-size:1.7rem;line-height:1;margin:0}
+.balk-titel{display:flex;align-items:center;gap:.6rem}
+.balk-titel img{border-radius:50%}
 .balk-rechts{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem 1.25rem;font-size:.95rem}
 .balk a{color:#fff}
 .teller{background:var(--hout);color:var(--navy-diep);font-weight:700;border-radius:99px;padding:.05rem .6rem;margin-left:.4rem}
 
 .knop{font:inherit;font-weight:700;background:var(--hout);color:var(--navy-diep);padding:.6rem 1.1rem;border:2px solid var(--hout);border-radius:3px;cursor:pointer}
-.knop:hover{background:#D79B4A;border-color:#D79B4A}
+.knop:hover{background:#EF5A66;border-color:#EF5A66}
 .knop-licht{background:transparent;color:inherit;border-color:currentColor}
 .knop-licht:hover{background:rgba(255,255,255,.12);border-color:currentColor}
 .knop-gevaar{background:transparent;color:#8E2A18;border-color:#8E2A18}
@@ -40,8 +42,8 @@ body{margin:0;background:var(--papier);font-family:var(--tekst-font);font-size:1
 
 .badge{flex:none;font-size:.78rem;font-weight:700;padding:.1rem .55rem;border-radius:99px}
 .s-nieuw{background:var(--hout);color:var(--navy-diep)}
-.s-in_behandeling{background:#D6E4F0;color:#1F3B57}
-.s-offerte_verstuurd{background:#1F3B57;color:#fff}
+.s-in_behandeling{background:#D6E4F0;color:#0A0A0A}
+.s-offerte_verstuurd{background:#0A0A0A;color:#fff}
 .s-akkoord{background:#D3EBDC;color:#1B4D30}
 .s-afgewezen{background:#EBD5D0;color:#7A1F10}
 .s-afgerond{background:#E3E7EA;color:#3D4A54}
