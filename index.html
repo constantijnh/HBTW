@@ -3,7 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#1F3B57">
+  <meta name="theme-color" content="#0A0A0A">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
   <title>Heetebrij Bouw &amp; Timmerwerken</title>
   <meta name="description" content="Heetebrij Bouw &amp; Timmerwerken: nieuwbouw, verbouw en timmerwerk op maat. Vraag vrijblijvend een offerte aan.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,11 +20,7 @@
   <header class="kop">
     <div class="in kop-in">
       <a class="merk-link" href="index.html" aria-label="Heetebrij Bouw &amp; Timmerwerken, naar de homepagina">
-        <svg class="merk" viewBox="0 0 40 40" aria-hidden="true">
-          <rect width="40" height="40" rx="4" fill="#1F3B57"/>
-          <path d="M6 20 20 8l14 12" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round"/>
-          <path d="M8 32l4-6 4 6 4-6 4 6 4-6 4 6" fill="none" stroke="#C58B3C" stroke-width="2.5" stroke-linejoin="round"/>
-        </svg>
+        <img class="merk" src="img/favicon.svg" width="40" height="40" alt="" aria-hidden="true">
         <span class="merk-tekst"><strong>Heetebrij</strong><small>Bouw &amp; timmerwerken</small></span>
       </a>
       <nav class="nav" aria-label="Hoofdmenu">
@@ -37,7 +36,7 @@
   <main id="main">
     <section class="held">
       <div class="in held-in">
-        <div>
+        <div data-toon="groep">
           <h1>Bouwen en timmeren, netjes afgewerkt.</h1>
           <p>Nieuwbouw, verbouw en timmerwerk op maat. U krijgt een duidelijke offerte en één aanspreekpunt van begin tot eind.</p>
           <div class="held-knoppen">
@@ -48,10 +47,10 @@
         <svg class="kap" viewBox="0 0 480 320" role="img" aria-label="Tekening van een houten dakspant met een maatlijn">
           <g fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path d="M30 250 L240 60 L450 250 Z" stroke="#fff" stroke-width="8"/>
-            <path d="M240 60 V250" stroke="#9FB4C6" stroke-width="5"/>
-            <path d="M240 250 L135 155 M240 250 L345 155" stroke="#9FB4C6" stroke-width="5"/>
+            <path d="M240 60 V250" stroke="#B5B5B5" stroke-width="5"/>
+            <path d="M240 250 L135 155 M240 250 L345 155" stroke="#B5B5B5" stroke-width="5"/>
           </g>
-          <g fill="#1F3B57" stroke="#fff" stroke-width="3">
+          <g fill="#0A0A0A" stroke="#fff" stroke-width="3">
             <circle cx="240" cy="60" r="7"/>
             <circle cx="30" cy="250" r="7"/>
             <circle cx="450" cy="250" r="7"/>
@@ -59,7 +58,7 @@
             <circle cx="135" cy="155" r="6"/>
             <circle cx="345" cy="155" r="6"/>
           </g>
-          <g stroke="#C58B3C" stroke-width="2" fill="none">
+          <g stroke="#E63946" stroke-width="2" fill="none">
             <path d="M30 288 H450 M30 278 V298 M450 278 V298"/>
             <path d="M72 284V292M114 284V292M156 284V292M198 284V292M240 282V294M282 284V292M324 284V292M366 284V292M408 284V292"/>
           </g>
@@ -71,23 +70,23 @@
 
     <section class="blok" aria-labelledby="diensten-kop">
       <div class="in">
-        <h2 id="diensten-kop">Wat we doen</h2>
-        <p class="blok-intro">Van een kast op maat tot een complete uitbouw. Dit kunt u van ons verwachten.</p>
-        <ul class="diensten">
+        <h2 id="diensten-kop" data-toon>Wat we doen</h2>
+        <p class="blok-intro" data-toon>Van een kast op maat tot een complete uitbouw. Dit kunt u van ons verwachten.</p>
+        <ul class="diensten" data-toon="groep">
           <li class="dienst">
             <h3>Nieuwbouw</h3>
             <p>Woningen, bijgebouwen en houtbouw, van fundering tot oplevering.</p>
-            <a href="offerte.html?soort=nieuwbouw">Offerte voor nieuwbouw</a>
+            <a class="streep-in" href="offerte.html?soort=nieuwbouw">Offerte voor nieuwbouw</a>
           </li>
           <li class="dienst">
             <h3>Verbouw en aanbouw</h3>
             <p>Een uitbouw, opbouw of complete verbouwing. We denken mee over indeling en uitvoering.</p>
-            <a href="offerte.html?soort=verbouw">Offerte voor verbouw</a>
+            <a class="streep-in" href="offerte.html?soort=verbouw">Offerte voor verbouw</a>
           </li>
           <li class="dienst">
             <h3>Timmerwerk op maat</h3>
             <p>Kasten, trappen en keukens, precies passend in uw ruimte.</p>
-            <a href="offerte.html?soort=timmerwerk">Offerte voor timmerwerk</a>
+            <a class="streep-in" href="offerte.html?soort=timmerwerk">Offerte voor timmerwerk</a>
           </li>
         </ul>
       </div>
@@ -95,33 +94,33 @@
 
     <section class="blok" aria-labelledby="projecten-kop" style="padding-top:0">
       <div class="in">
-        <h2 id="projecten-kop">Recent werk</h2>
-        <p class="blok-intro">Een greep uit wat we gebouwd en getimmerd hebben.</p>
-        <div class="tegels">
+        <h2 id="projecten-kop" data-toon>Recent werk</h2>
+        <p class="blok-intro" data-toon>Een greep uit wat we gebouwd en getimmerd hebben.</p>
+        <div class="tegels" data-toon="groep">
           <!-- VERVANG de .foto-blokken door <img src="img/naam.jpg" alt="Beschrijving"> -->
-          <figure class="tegel"><div class="foto">Foto volgt</div><figcaption>Uitbouw woning</figcaption></figure>
-          <figure class="tegel"><div class="foto">Foto volgt</div><figcaption>Houten bijgebouw</figcaption></figure>
-          <figure class="tegel"><div class="foto">Foto volgt</div><figcaption>Trap op maat</figcaption></figure>
+          <figure class="tegel zoom-kader"><div class="foto">Foto volgt</div><figcaption>Uitbouw woning</figcaption></figure>
+          <figure class="tegel zoom-kader"><div class="foto">Foto volgt</div><figcaption>Houten bijgebouw</figcaption></figure>
+          <figure class="tegel zoom-kader"><div class="foto">Foto volgt</div><figcaption>Trap op maat</figcaption></figure>
         </div>
-        <a class="blok-link" href="projecten.html">Alle projecten</a>
+        <a class="blok-link streep-in" href="projecten.html">Alle projecten</a>
       </div>
     </section>
 
     <section class="blok werkwijze" aria-labelledby="werkwijze-kop">
       <div class="in">
-        <h2 id="werkwijze-kop">Zo werken wij</h2>
-        <ul class="punten">
+        <h2 id="werkwijze-kop" data-toon>Zo werken wij</h2>
+        <ul class="punten" data-toon="groep">
           <li>Een vrijblijvende, duidelijke offerte</li>
           <li>Afspraken over prijs en planning op papier</li>
           <li>Een nette afwerking en een schone werkplek</li>
           <li>Eén aanspreekpunt van begin tot eind</li>
         </ul>
-        <a class="blok-link" href="diensten.html">Bekijk alle diensten</a>
+        <a class="blok-link streep-in" href="diensten.html">Bekijk alle diensten</a>
       </div>
     </section>
 
     <section class="cta" aria-labelledby="cta-kop">
-      <div class="in cta-in">
+      <div class="in cta-in" data-toon="groep">
         <div>
           <h2 id="cta-kop">Een klus in gedachten?</h2>
           <p>Vraag vrijblijvend een offerte aan.</p>
@@ -142,5 +141,6 @@
       </nav>
     </div>
   </footer>
+  <script src="effecten.js"></script>
 </body>
 </html>
