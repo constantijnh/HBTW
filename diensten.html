@@ -3,7 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#1F3B57">
+  <meta name="theme-color" content="#0A0A0A">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
   <title>Diensten | Heetebrij Bouw &amp; Timmerwerken</title>
   <meta name="description" content="Nieuwbouw, verbouw en timmerwerk op maat door Heetebrij Bouw &amp; Timmerwerken.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,11 +20,7 @@
   <header class="kop">
     <div class="in kop-in">
       <a class="merk-link" href="index.html" aria-label="Heetebrij Bouw &amp; Timmerwerken, naar de homepagina">
-        <svg class="merk" viewBox="0 0 40 40" aria-hidden="true">
-          <rect width="40" height="40" rx="4" fill="#1F3B57"/>
-          <path d="M6 20 20 8l14 12" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round"/>
-          <path d="M8 32l4-6 4 6 4-6 4 6 4-6 4 6" fill="none" stroke="#C58B3C" stroke-width="2.5" stroke-linejoin="round"/>
-        </svg>
+        <img class="merk" src="img/favicon.svg" width="40" height="40" alt="" aria-hidden="true">
         <span class="merk-tekst"><strong>Heetebrij</strong><small>Bouw &amp; timmerwerken</small></span>
       </a>
       <nav class="nav" aria-label="Hoofdmenu">
@@ -37,22 +36,22 @@
   <main id="main">
     <section class="paginakop">
       <div class="in">
-        <h1>Diensten</h1>
-        <p>Van een kast op maat tot een complete nieuwbouwwoning. Hieronder ziet u waar we u bij kunnen helpen.</p>
+        <h1 data-toon>Diensten</h1>
+        <p data-toon>Van een kast op maat tot een complete nieuwbouwwoning. Hieronder ziet u waar we u bij kunnen helpen.</p>
       </div>
       <div class="liniaal" aria-hidden="true"></div>
     </section>
 
     <div class="in">
       <!-- PAS AAN: voeg of verwijder een <li class="dienst-item"> om diensten te wijzigen -->
-      <ul class="diensten-lijst">
+      <ul class="diensten-lijst" data-toon="groep">
         <li class="dienst-item">
           <span class="nr">01</span>
           <div>
             <h2>Nieuwbouw</h2>
             <p>Woningen, bijgebouwen en houtbouw, van fundering tot oplevering. We denken mee vanaf de eerste schets.</p>
           </div>
-          <a class="knop knop-klein knop-rand" href="offerte.html?soort=nieuwbouw" style="color:#1F3B57;border-color:#1F3B57">Offerte aanvragen</a>
+          <a class="knop knop-klein knop-rand" href="offerte.html?soort=nieuwbouw" style="color:#0A0A0A;border-color:#0A0A0A">Offerte aanvragen</a>
         </li>
         <li class="dienst-item">
           <span class="nr">02</span>
@@ -60,7 +59,7 @@
             <h2>Verbouw en aanbouw</h2>
             <p>Een uitbouw, opbouw of complete verbouwing. We houden rekening met de bestaande situatie en uw wensen.</p>
           </div>
-          <a class="knop knop-klein knop-rand" href="offerte.html?soort=verbouw" style="color:#1F3B57;border-color:#1F3B57">Offerte aanvragen</a>
+          <a class="knop knop-klein knop-rand" href="offerte.html?soort=verbouw" style="color:#0A0A0A;border-color:#0A0A0A">Offerte aanvragen</a>
         </li>
         <li class="dienst-item">
           <span class="nr">03</span>
@@ -68,7 +67,7 @@
             <h2>Timmerwerk op maat</h2>
             <p>Kasten, trappen, keukens en ander maatwerk, precies passend in uw ruimte en netjes afgewerkt.</p>
             </div>
-          <a class="knop knop-klein knop-rand" href="offerte.html?soort=timmerwerk" style="color:#1F3B57;border-color:#1F3B57">Offerte aanvragen</a>
+          <a class="knop knop-klein knop-rand" href="offerte.html?soort=timmerwerk" style="color:#0A0A0A;border-color:#0A0A0A">Offerte aanvragen</a>
         </li>
         <li class="dienst-item">
           <span class="nr">04</span>
@@ -76,15 +75,15 @@
             <h2>Onderhoud en herstel</h2>
             <p>Houtrot, kozijnen, vloeren en klein bouwkundig herstel, snel en vakkundig opgelost.</p>
           </div>
-          <a class="knop knop-klein knop-rand" href="offerte.html?soort=onderhoud" style="color:#1F3B57;border-color:#1F3B57">Offerte aanvragen</a>
+          <a class="knop knop-klein knop-rand" href="offerte.html?soort=onderhoud" style="color:#0A0A0A;border-color:#0A0A0A">Offerte aanvragen</a>
         </li>
       </ul>
     </div>
 
     <section class="blok werkwijze" aria-labelledby="werkwijze-kop">
       <div class="in">
-        <h2 id="werkwijze-kop">Zo werken wij</h2>
-        <ul class="punten">
+        <h2 id="werkwijze-kop" data-toon>Zo werken wij</h2>
+        <ul class="punten" data-toon="groep">
           <li>Een vrijblijvende, duidelijke offerte</li>
           <li>Afspraken over prijs en planning op papier</li>
           <li>Een nette afwerking en een schone werkplek</li>
@@ -94,7 +93,7 @@
     </section>
 
     <section class="cta" aria-labelledby="cta-kop">
-      <div class="in cta-in">
+      <div class="in cta-in" data-toon="groep">
         <div>
           <h2 id="cta-kop">Een klus in gedachten?</h2>
           <p>Vraag vrijblijvend een offerte aan.</p>
@@ -115,5 +114,6 @@
       </nav>
     </div>
   </footer>
+  <script src="effecten.js"></script>
 </body>
 </html>
