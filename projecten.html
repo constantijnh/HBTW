@@ -3,7 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#1F3B57">
+  <meta name="theme-color" content="#0A0A0A">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
   <title>Projecten | Heetebrij Bouw &amp; Timmerwerken</title>
   <meta name="description" content="Bekijk projecten van Heetebrij Bouw &amp; Timmerwerken: nieuwbouw, verbouw en timmerwerk op maat.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,11 +20,7 @@
   <header class="kop">
     <div class="in kop-in">
       <a class="merk-link" href="index.html" aria-label="Heetebrij Bouw &amp; Timmerwerken, naar de homepagina">
-        <svg class="merk" viewBox="0 0 40 40" aria-hidden="true">
-          <rect width="40" height="40" rx="4" fill="#1F3B57"/>
-          <path d="M6 20 20 8l14 12" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round"/>
-          <path d="M8 32l4-6 4 6 4-6 4 6 4-6 4 6" fill="none" stroke="#C58B3C" stroke-width="2.5" stroke-linejoin="round"/>
-        </svg>
+        <img class="merk" src="img/favicon.svg" width="40" height="40" alt="" aria-hidden="true">
         <span class="merk-tekst"><strong>Heetebrij</strong><small>Bouw &amp; timmerwerken</small></span>
       </a>
       <nav class="nav" aria-label="Hoofdmenu">
@@ -37,8 +36,8 @@
   <main id="main">
     <section class="paginakop">
       <div class="in">
-        <h1>Projecten</h1>
-        <p>Een greep uit ons werk. Filter op soort werk om te zien wat het dichtst bij uw klus in de buurt komt.</p>
+        <h1 data-toon>Projecten</h1>
+        <p data-toon>Een greep uit ons werk. Filter op soort werk om te zien wat het dichtst bij uw klus in de buurt komt.</p>
       </div>
       <div class="liniaal" aria-hidden="true"></div>
     </section>
@@ -52,41 +51,41 @@
       </div>
 
       <!-- PAS AAN: vervang titels, plaatsen en omschrijvingen door echte projecten.
-           Vervang <div class="foto">Foto volgt</div> door <img class="foto" src="img/naam.jpg" alt="Beschrijving">.
+           Vervang <div class="foto zoom-kader"><span>Foto volgt</span></div> door <img class="foto" src="img/naam.jpg" alt="Beschrijving">.
            Kopieer een <article> om een project toe te voegen; data-soort is: nieuwbouw, verbouw of timmerwerk. -->
-      <div class="projecten" id="projecten">
+      <div class="projecten" id="projecten" data-toon="groep">
         <article class="project" data-soort="verbouw">
-          <div class="foto">Foto volgt</div>
+          <div class="foto zoom-kader"><span>Foto volgt</span></div>
           <h2>Uitbouw woning</h2>
           <p class="soort">Verbouw en aanbouw, [plaats]</p>
           <p>Korte omschrijving van het project.</p>
         </article>
         <article class="project" data-soort="nieuwbouw">
-          <div class="foto">Foto volgt</div>
+          <div class="foto zoom-kader"><span>Foto volgt</span></div>
           <h2>Houten bijgebouw</h2>
           <p class="soort">Nieuwbouw, [plaats]</p>
           <p>Korte omschrijving van het project.</p>
         </article>
         <article class="project" data-soort="timmerwerk">
-          <div class="foto">Foto volgt</div>
+          <div class="foto zoom-kader"><span>Foto volgt</span></div>
           <h2>Trap op maat</h2>
           <p class="soort">Timmerwerk op maat, [plaats]</p>
           <p>Korte omschrijving van het project.</p>
         </article>
         <article class="project" data-soort="verbouw">
-          <div class="foto">Foto volgt</div>
+          <div class="foto zoom-kader"><span>Foto volgt</span></div>
           <h2>Dakopbouw</h2>
           <p class="soort">Verbouw en aanbouw, [plaats]</p>
           <p>Korte omschrijving van het project.</p>
         </article>
         <article class="project" data-soort="timmerwerk">
-          <div class="foto">Foto volgt</div>
+          <div class="foto zoom-kader"><span>Foto volgt</span></div>
           <h2>Kastenwand op maat</h2>
           <p class="soort">Timmerwerk op maat, [plaats]</p>
           <p>Korte omschrijving van het project.</p>
         </article>
         <article class="project" data-soort="nieuwbouw">
-          <div class="foto">Foto volgt</div>
+          <div class="foto zoom-kader"><span>Foto volgt</span></div>
           <h2>Woning in houtskeletbouw</h2>
           <p class="soort">Nieuwbouw, [plaats]</p>
           <p>Korte omschrijving van het project.</p>
@@ -95,7 +94,7 @@
     </div>
 
     <section class="cta" aria-labelledby="cta-kop">
-      <div class="in cta-in">
+      <div class="in cta-in" data-toon="groep">
         <div>
           <h2 id="cta-kop">Een vergelijkbare klus?</h2>
           <p>Vertel wat u wilt laten maken en ontvang een vrijblijvende offerte.</p>
@@ -132,5 +131,6 @@
       });
     })();
   </script>
+  <script src="effecten.js"></script>
 </body>
 </html>
