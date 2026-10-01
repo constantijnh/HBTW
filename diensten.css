@@ -1,7 +1,7 @@
 /* HBTW - basis: kleuren, letters, kop, knoppen, voet */
 :root{
-  --navy:#1F3B57; --navy-diep:#142A40; --inkt:#17232F; --papier:#F4F6F7; --wit:#fff;
-  --hout:#C58B3C; --hout-diep:#8F5F1E; --lijn:#D5DCE1; --gedempt:#54646F;
+  --navy:#0A0A0A; --navy-diep:#000000; --inkt:#111111; --papier:#F2F0EE; --wit:#fff;
+  --hout:#E63946; --hout-diep:#C1121F; --lijn:#DCDCDC; --gedempt:#595959;
   --kop-font:"Barlow Condensed","Arial Narrow",Arial,sans-serif;
   --tekst-font:"Source Sans 3","Segoe UI",Arial,sans-serif;
   --breed:72rem;
@@ -21,7 +21,7 @@ h1,h2,h3{font-family:var(--kop-font);line-height:1.05;margin:0;letter-spacing:.0
 .kop{position:sticky;top:0;z-index:10;background:var(--wit);border-bottom:1px solid var(--lijn)}
 .kop-in{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;padding:.7rem 0}
 .merk-link{display:flex;align-items:center;gap:.7rem;text-decoration:none}
-.merk{width:2.5rem;height:2.5rem;flex:none}
+.merk{width:2.5rem;height:2.5rem;flex:none;border-radius:50%}
 .merk-tekst{display:grid;line-height:1.1}
 .merk-tekst strong{font-family:var(--kop-font);font-size:1.55rem;color:var(--navy);letter-spacing:.02em}
 .merk-tekst small{color:var(--gedempt);font-size:.85rem}
@@ -32,7 +32,7 @@ h1,h2,h3{font-family:var(--kop-font);line-height:1.05;margin:0;letter-spacing:.0
 
 /* knoppen */
 .knop{display:inline-block;font:inherit;font-weight:700;background:var(--hout);color:var(--navy-diep);text-decoration:none;padding:.85rem 1.4rem;border:2px solid var(--hout);border-radius:3px;cursor:pointer;line-height:1.2}
-.knop:hover{background:#D79B4A;border-color:#D79B4A}
+.knop:hover{background:#EF5A66;border-color:#EF5A66}
 .knop-rand{background:transparent;color:inherit;border-color:currentColor}
 .knop-rand:hover{background:rgba(255,255,255,.12);border-color:currentColor}
 .knop-klein{padding:.5rem 1rem}
@@ -44,7 +44,7 @@ h1,h2,h3{font-family:var(--kop-font);line-height:1.05;margin:0;letter-spacing:.0
     repeating-linear-gradient(90deg,currentColor 0 1px,transparent 1px 12px) 0 0/100% 10px no-repeat}
 
 /* voet */
-.voet{background:var(--navy-diep);color:#C9D3DB;padding:2rem 0;font-size:.95rem}
+.voet{background:var(--navy-diep);color:#CFCFCF;padding:2rem 0;font-size:.95rem}
 .voet-in{display:flex;flex-wrap:wrap;gap:1rem 2rem;justify-content:space-between;align-items:center}
 .voet nav{display:flex;flex-wrap:wrap;gap:.5rem 1.25rem}
 .voet a{text-decoration:none}
@@ -59,18 +59,23 @@ h1,h2,h3{font-family:var(--kop-font);line-height:1.05;margin:0;letter-spacing:.0
 /* paginakop (navy balk bovenaan) */
 .paginakop{background:var(--navy);color:#fff;padding-top:3.5rem}
 .paginakop h1{font-size:clamp(2.6rem,6vw,4.2rem);font-weight:700}
-.paginakop p{max-width:36rem;color:#DCE4EA;font-size:1.15rem;margin:.9rem 0 2.75rem}
+.paginakop p{max-width:36rem;color:#D6D6D6;font-size:1.15rem;margin:.9rem 0 2.75rem}
 
 /* ===== Diensten ===== */
-.diensten-lijst{list-style:none;margin:0;padding:3rem 0 1rem;display:grid;gap:0;border-top:2px solid var(--navy)}
-.dienst-item{display:grid;grid-template-columns:5.5rem minmax(0,1fr) auto;gap:1rem 2rem;align-items:start;padding:2.25rem 0;border-bottom:1px solid var(--lijn)}
-.dienst-item .nr{font-family:var(--kop-font);font-size:2.4rem;color:var(--hout);line-height:1}
-.dienst-item h2{font-size:2rem;color:var(--navy);margin-bottom:.5rem}
-.dienst-item p{margin:0;color:var(--gedempt);max-width:36rem}
-.dienst-item a{align-self:center;white-space:nowrap}
-@media (max-width:700px){
-  .dienst-item{grid-template-columns:3.5rem 1fr;padding:1.75rem 0}
-  .dienst-item a{grid-column:1/-1;margin-top:.75rem;justify-self:start}
+.diensten-lijst{list-style:none;margin:0;padding:1rem 0 2rem;display:grid;gap:0;border-top:1px solid var(--lijn)}
+.dienst-item{display:grid;grid-template-columns:6.5rem minmax(0,1fr) auto;gap:1rem 2.5rem;align-items:center;padding:3.25rem 0;border-bottom:1px solid var(--lijn);transition:border-color .35s}
+.dienst-item:hover{border-bottom-color:var(--navy)}
+.dienst-item .nr{font-family:var(--kop-font);font-size:3.2rem;color:var(--lijn);line-height:1;transition:color .35s,transform .35s cubic-bezier(.2,.7,.2,1)}
+.dienst-item:hover .nr{color:var(--hout);transform:translateX(4px)}
+.dienst-item h2{font-size:clamp(1.7rem,3vw,2.35rem);color:var(--navy);margin-bottom:.6rem;transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+.dienst-item:hover h2{transform:translateX(6px)}
+.dienst-item p{margin:0;color:var(--gedempt);max-width:34rem}
+.dienst-item a{align-self:center;white-space:nowrap;opacity:0;transform:translateX(-6px);transition:opacity .3s,transform .3s}
+.dienst-item:hover a,.dienst-item:focus-within a{opacity:1;transform:none}
+@media (max-width:760px){
+  .dienst-item{grid-template-columns:3.5rem 1fr;padding:2rem 0;row-gap:.5rem}
+  .dienst-item a{grid-column:1/-1;margin-top:.25rem;justify-self:start;opacity:1;transform:none}
+  .dienst-item .nr{font-size:2.2rem}
 }
 
 .werkwijze{background:var(--papier)}
@@ -83,4 +88,23 @@ h1,h2,h3{font-family:var(--kop-font);line-height:1.05;margin:0;letter-spacing:.0
 .cta{background:var(--navy);color:#fff;padding:4rem 0}
 .cta-in{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.5rem 3rem}
 .cta h2{font-size:clamp(2rem,4vw,2.9rem)}
-.cta p{margin:.5rem 0 0;color:#DCE4EA}
+.cta p{margin:.5rem 0 0;color:#D6D6D6}
+
+/* ===== effecten: rustig infaden/opschuiven bij scrollen, hover-animaties ===== */
+[data-toon]{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+[data-toon="groep"]{opacity:1;transform:none;transition:none}
+[data-toon="groep"]>*{opacity:0;transform:translateY(28px);transition:opacity .6s cubic-bezier(.2,.7,.2,1),transform .6s cubic-bezier(.2,.7,.2,1)}
+.toon-in-beeld,[data-toon="groep"]>.toon-in-beeld{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  [data-toon],[data-toon="groep"]>*{transition:none;opacity:1;transform:none}
+}
+
+/* onderstreping die van links naar rechts intekent bij hover */
+.streep-in{position:relative;text-decoration:none}
+.streep-in::after{content:"";position:absolute;left:0;right:100%;bottom:-2px;height:2px;background:currentColor;transition:right .35s cubic-bezier(.2,.7,.2,1)}
+.streep-in:hover::after,.streep-in:focus-visible::after{right:0}
+
+/* lichte zoom op een foto/kader bij hover */
+.zoom-kader{overflow:hidden}
+.zoom-kader>*{transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.zoom-kader:hover>*,.zoom-kader:focus-within>*{transform:scale(1.045)}
