@@ -104,7 +104,7 @@
   async function laadAanvragen() {
     var resultaat = await sb
       .from('aanvragen')
-      .select('*')
+select('*')
       .order('aangemaakt', { ascending: false });
 
     if (resultaat.error) {
@@ -363,73 +363,45 @@
 
         if (resultaat.error) {
           console.error(resultaat.error);
-          toonMelding(
-            'Opslaan is niet gelukt: ' +
-            resultaat.error.message
-          );
-          return;
+          alert('Opslaan mislukt: ' + resultaat.error.message);
+        } else {
+          await laadAanvragen();
+          alert('Wijzigingen succesvol opgeslagen!');
         }
-
-        toonMelding('Aanvraag opgeslagen.', 'ok');
-
-        await laadAanvragen();
       }
     );
 
-    verwijderKnop.addEventListener(
-      'click',
-      async function () {
-        if (
-          !window.confirm(
-            'Deze aanvraag verwijderen? Dit kan niet ongedaan worden gemaakt.'
-          )
-        ) {
-          return;
-        }
+    verwijderKnop.addEventListener('click', async function () {
+      if (!confirm('Weet u zeker dat u deze aanvraag wilt verwijderen?')) return;
+      
+      var resultaat = await sb
+        .from('aanvragen')
+        .delete()
+        .eq('id', a.id);
 
-        verwijderKnop.disabled = true;
-
-        var resultaat = await sb
-          .from('aanvragen')
-          .delete()
-          .eq('id', a.id);
-
-        if (resultaat.error) {
-          verwijderKnop.disabled = false;
-          console.error(resultaat.error);
-          toonMelding(
-            'Verwijderen is niet gelukt: ' +
-            resultaat.error.message
-          );
-          return;
-        }
-
+      if (resultaat.error) {
+        console.error(resultaat.error);
+        alert('Verwijderen mislukt.');
+      } else {
         actieveId = null;
-
-        toonMelding('Aanvraag verwijderd.', 'ok');
-
         await laadAanvragen();
       }
-    );
+    });
   }
 
-  if (filterStatus) {
-    filterStatus.addEventListener('change', tekenLijst);
-  }
+  // Luister naar de status- en type-filters bovenin het scherm
+  if (filterStatus) filterStatus.addEventListener('change', tekenLijst);
+  if (filterType) filterType.addEventListener('change', tekenLijst);
 
-  if (filterType) {
-    filterType.addEventListener('change', tekenLijst);
-  }
-
+  // Zorg dat de uitlogknop werkt
   if (uitlogKnop) {
     uitlogKnop.addEventListener('click', async function () {
-      uitlogKnop.disabled = true;
-
       await sb.auth.signOut();
-
       window.location.href = 'login.html';
     });
   }
 
-  checkSessieEnLaad();
+  // Start direct bij het laden van de pagina de sessiecontrole op
+  document.addEventListener('DOMContentLoaded', checkSessieEnLaad);
+
 })();
